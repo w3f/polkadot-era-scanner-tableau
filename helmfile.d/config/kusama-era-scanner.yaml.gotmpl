@@ -5,4 +5,4 @@ config:
   logLevel: debug
   healthCheckPort: 8000
   endpoint: 'ws://rpc-node-base-services-external-websockets.kusama:9944'
-  databaseUrl: 'postgres://{{ env "PG_USERNAME" | default "pgusername" }}:{{ env "PG_PASSWORD" | default "pgpassword" }}@postgresql-14-primary/{{ env "PG_DBNAME" | default "dbname" }}'
+  databaseUrl: 'postgres://{{ env "PG_USERNAME" | default "pgusername" }}:{{ env "PG_PASSWORD" | default "pgpassword" }}@postgresql-14/{{ env "PG_DBNAME" | default "dbname" }}'

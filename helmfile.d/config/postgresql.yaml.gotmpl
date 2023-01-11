@@ -8,25 +8,11 @@ auth:
   database: {{ env "PG_DBNAME" | default "dbname" }}
   replicationUsername: repl_user
   replicationPassword: repl_password
-architecture: replication
+architecture: standalone
 primary:
   initdb:
     args: --lc-collate C --lc-ctype C --encoding UTF8
-  resources:
-    requests:
-      memory: 1Gi
-      cpu: 250m
   persistence:
-    enabled: true
-    size: 200Gi
-readReplicas:
-  replicaCount: 2
-  persistence:
-    enabled: true
-    size: 200Gi
-  resources:
-    requests:
-      memory: 1Gi
-      cpu: 250m
+    enabled: false
 metrics:
-  enabled: true
+  enabled: false
