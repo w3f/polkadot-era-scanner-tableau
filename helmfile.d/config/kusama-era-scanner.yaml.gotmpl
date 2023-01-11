@@ -1,4 +1,5 @@
-environment: production
+image:
+  tag: {{ env "CIRCLE_SHA1" | default "kind" }}
 
 config:
   logLevel: debug
