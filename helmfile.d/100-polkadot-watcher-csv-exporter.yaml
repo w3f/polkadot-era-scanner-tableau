@@ -8,6 +8,6 @@ repositories:
 
 releases:
   - name: polkadot-era-scanner
-    chart: ../charts/polkadot-era-scanner
+    chart: ../charts/polkadot-era-scanner-tableau
     values:
       - ./config/polkadot-era-scanner.yaml.gotmpl
