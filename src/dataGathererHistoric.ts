@@ -1,17 +1,10 @@
 /*eslint @typescript-eslint/no-use-before-define: ["error", { "variables": false }]*/
 
-import { DeriveEraPoints } from '@polkadot/api-derive/staking/types';
-import { ValidatorInfo, NominatorInfo, ChainData, EraLastBlock, Voter } from "./types";
+import { ValidatorInfo, NominatorInfo, ChainData } from "./types";
 import { Logger } from '@w3f/logger';
 import { ApiPromise } from '@polkadot/api';
-import { getDisplayName, erasLastBlock as erasLastBlockFunction } from './utils';
-import { DeriveEraExposure, DeriveStakingAccount } from '@polkadot/api-derive/staking/types'
-import { DeriveAccountInfo } from '@polkadot/api-derive/accounts/types'
-import BN from 'bn.js';
-import type { AccountId32, EraIndex, StakingLedger, Nominations } from '@polkadot/types/interfaces';
-import type { PalletStakingNominations, PalletStakingStakingLedger, PalletStakingExposure } from '@polkadot/types/lookup';
-import { application } from 'express';
-
+import { erasLastBlock as erasLastBlockFunction } from './utils';
+import type { EraIndex, StakingLedger, Nominations } from '@polkadot/types/interfaces';
 export interface ChainDataHistoricalRequest {
   api: ApiPromise;
   network: string;

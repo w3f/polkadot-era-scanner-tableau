@@ -1,5 +1,3 @@
-import fs, { ReadStream, WriteStream } from 'fs';
-import { Logger } from '@w3f/logger';
 import { DeriveAccountRegistration } from '@polkadot/api-derive/accounts/types';
 import { EraIndex, Event } from '@polkadot/types/interfaces';
 import { ApiPromise } from '@polkadot/api';

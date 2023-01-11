@@ -1,7 +1,5 @@
 import { EraIndex } from '@polkadot/types/interfaces';
 import { Logger } from '@w3f/logger';
-import { dataFileName } from '../constants'
-import readline from 'readline';
 import {
   InputConfig,
 } from '../types';
