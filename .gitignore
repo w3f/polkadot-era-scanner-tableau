@@ -1,0 +1,6 @@
+config/*
+!config/*sample*
+node_modules
+dist
+data*
+!src/database.ts

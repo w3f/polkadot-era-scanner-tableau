@@ -1,0 +1,7 @@
+endpoint: "wss://kusama-rpc.polkadot.io/"
+port: 3000
+logLevel: info
+exportDir: "./data-csv"
+historic:
+  enabled: true
+  historySize: 5  
