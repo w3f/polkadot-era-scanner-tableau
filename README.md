@@ -1,6 +1,6 @@
 # polkadot-era-scanner-tableau
 
-[![CircleCI](https://circleci.com/gh/w3f/polkadot-watcher-csv-exporter.svg?style=svg)](https://circleci.com/gh/w3f/polkadot-watcher-csv-exporter) [![Total alerts](https://img.shields.io/lgtm/alerts/g/w3f/polkadot-watcher-csv-exporter.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/w3f/polkadot-watcher-csv-exporter/alerts/) [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/w3f/polkadot-watcher-csv-exporter.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/w3f/polkadot-watcher-csv-exporter/context:javascript)
+[![CircleCI](https://circleci.com/gh/w3f/polkadot-era-scanner-tableau.svg?style=svg)](https://circleci.com/gh/w3f/polkadot-era-scanner-tableau) [![Total alerts](https://img.shields.io/lgtm/alerts/g/w3f/polkadot-era-scanner-tableau.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/w3f/polkadot-era-scanner-tableau/alerts/) [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/w3f/polkadot-era-scanner-tableau.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/w3f/polkadot-era-scanner-tableau/context:javascript)
 
 Forked from https://github.com/w3f/polkadot-watcher-csv-exporter  
 This project is meant to be used with https://www.tableau.com/
