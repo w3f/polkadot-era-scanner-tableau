@@ -11,14 +11,7 @@ run_tests() {
     wait_pod_ready polkadot-era-scanner
 }
 
-teardown() {
-}
-
 main(){
-    if [ -z "$KEEP_W3F_POLKADOT_WATCHER" ]; then
-        trap teardown EXIT
-    fi
-
     /scripts/build-helmfile.sh
 
     run_tests
