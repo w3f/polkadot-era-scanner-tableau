@@ -7,13 +7,11 @@ source /scripts/bootstrap-helm.sh
 run_tests() {
     echo Running tests...
 
-    wait_pod_ready session-exporter 
-    wait_pod_ready era-scanner
+    wait_pod_ready kusama-era-scanner 
+    wait_pod_ready polkadot-era-scanner
 }
 
 teardown() {
-    helm delete session-exporter
-    helm delete era-scanner
 }
 
 main(){
