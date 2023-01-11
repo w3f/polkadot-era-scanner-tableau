@@ -1,6 +1,5 @@
 environments:
   ci:
-  local:
 
 repositories:
   - name: w3f
@@ -9,7 +8,5 @@ repositories:
 releases:
   - name: kusama-era-scanner
     chart: ../charts/polkadot-era-scanner
-    version: v0.12
-    namespace: angela-era-scanner
     values:
       - ./config/kusama-era-scanner.yaml.gotmpl

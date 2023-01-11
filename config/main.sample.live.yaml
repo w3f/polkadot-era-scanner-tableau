@@ -1,8 +1,0 @@
-endpoint: "wss://kusama-rpc.polkadot.io/"
-port: 3000
-logLevel: info
-exportDir: "./data-csv"
-endSessionBlockDistance: 20
-apiChunkSize: 3000
-cronjob:
-  enabled: false 

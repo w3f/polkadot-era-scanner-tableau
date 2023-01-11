@@ -1,8 +1,11 @@
 environment: production
 
 image:
-  repo: lamafab/polkadot-era-scanner
-  tag: latest
+  repo: web3f/polkadot-era-scanner-tableau
+ # tag: latest
+
+loadBalancer:
+  enabled: false
 
 config:
   logLevel: debug

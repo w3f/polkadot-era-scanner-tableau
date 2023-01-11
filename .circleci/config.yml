@@ -3,12 +3,12 @@ version: 2
 jobs:
   helmLint:
     docker:
-      - image: web3f/ci-commons:v3.1.6
+      - image: web3f/ci-commons:v3
     steps:
       - checkout
       - run:
           command: |
-            helm lint ./charts/polkadot-watcher-csv-exporter
+            helm lint ./charts/polkadot-era-scanner-tableau
 
   yarnLint:
     docker:
@@ -21,7 +21,7 @@ jobs:
 
   buildImage:
     docker:
-      - image: web3f/ci-commons:v3.1.6
+      - image: web3f/ci-commons:v3
     steps:
       - checkout
       - setup_remote_docker:
@@ -29,22 +29,22 @@ jobs:
           version: 20.10.7
       - run:
           command: |
-            /scripts/build-image.sh web3f/polkadot-watcher-csv-exporter .
+            /scripts/build-image.sh web3f/polkadot-era-scanner-tableau .
 
   publishImage:
     docker:
-      - image: web3f/ci-commons:v3.1.6
+      - image: web3f/ci-commons:v3
     steps:
       - checkout
       - setup_remote_docker:
           version: 20.10.7
       - run:
           command: |
-            /scripts/publish-image.sh web3f/polkadot-watcher-csv-exporter
+            /scripts/publish-image.sh web3f/polkadot-era-scanner-tableau
 
   publishChart:
     docker:
-      - image: web3f/ci-commons:v3.1.6
+      - image: web3f/ci-commons:v3
     steps:
       - checkout
       - run:
@@ -53,7 +53,7 @@ jobs:
 
   integrationTests:
     docker:
-      - image: web3f/ci-commons:v3.1.6
+      - image: web3f/ci-commons:v3
     steps:
       - checkout
       - setup_remote_docker:

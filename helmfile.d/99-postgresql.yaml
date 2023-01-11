@@ -9,7 +9,6 @@ repositories:
 releases:
   - name: postgresql-14
     chart: bitnami/postgresql
-    version: 11.1.13
-    namespace: angela-era-scanner
+    version: ^11.1.13
     values:
       - ./config/postgresql.yaml.gotmpl
