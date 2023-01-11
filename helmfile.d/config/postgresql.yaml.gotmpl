@@ -2,10 +2,10 @@ volumePermissions:
   enabled: true
 auth:
   enablePostgresUser: true
-  postgresPassword: {{ env "PG_PASSWORD" }}
-  username: {{ env "PG_USERNAME" }}
-  password: {{ env "PG_PASSWORD" }}
-  database: {{ env "PG_DBNAME" }}
+  postgresPassword: {{ env "PG_PASSWORD" | default "pgpgpassword" }}
+  username: {{ env "PG_USERNAME" | default "pgusername" }}
+  password: {{ env "PG_PASSWORD" | default "pgusername" }}
+  database: {{ env "PG_DBNAME" | default "dbname" }}
   replicationUsername: repl_user
   replicationPassword: repl_password
 architecture: replication
