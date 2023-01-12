@@ -5,8 +5,10 @@ metadata:
   name: {{ .Release.Name }}-db
   labels:
     app: {{ .Release.Name }}
+  {{ if .Values.loadBalancer.domain -}} 
   annotations:
     external-dns.alpha.kubernetes.io/hostname: {{ .Values.loadBalancer.domain }} 
+  {{ end -}}     
 spec:
   type: LoadBalancer
   ports:
@@ -16,6 +18,10 @@ spec:
   selector:
     app.kubernetes.io/instance: postgresql-14
     app.kubernetes.io/name: postgresql
+  {{ if .Values.loadBalancer.loadBalancerSourceRanges -}}  
   loadBalancerSourceRanges:
-  {{ .Values.loadBalancer.loadBalancerSourceRanges }}   
+    {{- range .Values.loadBalancer.loadBalancerSourceRanges }}
+    - {{ . }}
+    {{- end }}
+  {{- end }}   
 {{ end }}
