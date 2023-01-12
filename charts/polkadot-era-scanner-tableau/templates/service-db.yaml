@@ -5,10 +5,10 @@ metadata:
   name: {{ .Release.Name }}-db
   labels:
     app: {{ .Release.Name }}
-  {{ if .Values.loadBalancer.domain -}} 
+  {{- if .Values.loadBalancer.domain }} 
   annotations:
     external-dns.alpha.kubernetes.io/hostname: {{ .Values.loadBalancer.domain }} 
-  {{ end -}}     
+  {{- end }}     
 spec:
   type: LoadBalancer
   ports:
