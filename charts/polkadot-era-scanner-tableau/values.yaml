@@ -6,9 +6,9 @@ image:
 
 loadBalancer:
   enabled: false
-  domain: yourDomain.com
-  loadBalancerSourceRanges:
-  - 1.2.3.4/32
+  # domain: yourDomain.com
+  # loadBalancerSourceRanges:
+  # - 1.2.3.4/32
 
 config:
   logLevel: debug
